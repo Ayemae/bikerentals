@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./normalize.css" />
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <title>Bike Rentals</title>
 
     <!-- jQuery -->
     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-</head>
-<body>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section class="header">
+        <h1 class="title">Bike Rentals</h1>
+
+      <div class="cart-summary">
+        <span class="cart-header">Cart: </span>
+        <div id="my-cart">$0.00 [0 items]</div>
+      </div>
+    </section>
+
+    <section id="info"></section>
+    <section id="promo"></section>
+
+    <section id="shop-index"></section>
 
     <section class="cart">
-    <h2>Cart:</h2>
-        <div id="my-cart">$0.00 [0 items]</div>
-    </section>  
+      <h1>My Cart</h1>
+      <div class="cart-total-box">
+        <span id="cart-total">$0.00 [0 items]</span>
+      </div>
+      <div id="cart-display"></div>
 
-    <h1>Bike Rentals</h1>
-    
-    <section id="shop-index">
-
-
+      <div id="checkout"></div>
     </section>
-
-    <section id="cart-display">
-        Cart display
-        <div class="cart-total-box">
-            <span id="cart-total">$0.00 [0 items]</span>
-        </div>
-
-    </section>
-
-</body>
-<script src="./app.js"></script>
+  </body>
+  <script src="./app.js"></script>
 </html>
