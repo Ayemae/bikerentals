@@ -195,6 +195,7 @@ h1.title {
 .more-less {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 button#less,
   button#more {
@@ -231,9 +232,12 @@ button#less,
     margin: 1px;
     padding: 2px;
   }
-  button#less,
-  button#more {
+  .more-less {
+      width: 100%;
+  }
+  .more-less button {
     width: 45%;
+    cursor: pointer;
   }
   .cart-summary {
     background: #57f95d;
