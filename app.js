@@ -168,7 +168,11 @@ $(document).ready(() => {
   });
 
   ///////////////////////// REMOVE BUTTON
-  $(document.body).on("touchstart click", "#rmv-btn", function() {
+  $(document.body).on("touchstart click", "#rmv-btn", function(e) {
+    if(e.type == 'touchstart'){
+      $(this).off('click');
+  }
+
     const removedID = $(this)
       .parent()
       .parent()
@@ -205,7 +209,10 @@ $(document).ready(() => {
   });
 
   //////////////////////// MORE BUTTON
-  $(document.body).on("touchstart click", "#more", function() {
+  $(document.body).on("touchstart click", "#more", function(e) {
+    if(e.type == 'touchstart'){
+      $(this).off('click');
+  }
     // Which item is being increased?
     const itemID = $(this)
       .closest(".cart-item")
@@ -245,7 +252,10 @@ $(document).ready(() => {
   });
 
   //////////////// LESS BUTTON
-  $(document.body).on("touchstart click", "#less", function() {
+  $(document.body).on("touchstart click", "#less", function(e) {
+    if(e.type == 'touchstart'){
+      $(this).off('click');
+  }
     // Which item is being decreased?
     const itemID = $(this)
       .closest(".cart-item")
@@ -297,7 +307,10 @@ $(document).ready(() => {
   });
 
   //////////////////////// ADD INSURANCE
-  $(document.body).on("touchstart click", "#add-insurance", function() {
+  $(document.body).on("touchstart click", "#add-insurance", function(e) {
+    if(e.type == 'touchstart'){
+      $(this).off('click');
+  }
     // Which item is being increased?
     const itemID = $(this).data("id");
     const dataIndex = itemID - 1;
@@ -334,7 +347,10 @@ $(document).ready(() => {
     return cart;
   });
 
-  $(document.body).on("touchstart click", "#checkout-submit", function() {
+  $(document.body).on("touchstart click", "#checkout-submit", function(e) {
+    if(e.type == 'touchstart'){
+      $(this).off('click');
+  }
     let arrOfChecked = [];
     const validate = confirm(`Proceed to checkout?`);
     if (validate == true) {
