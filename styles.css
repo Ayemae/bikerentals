@@ -39,6 +39,7 @@ button {
   background: rgb(37, 111, 238);
   border: none;
   outline: none;
+  cursor: pointer;
 }
 button:disabled {
   background: rgb(151, 168, 198);
