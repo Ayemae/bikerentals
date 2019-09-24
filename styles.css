@@ -156,6 +156,10 @@ h1.title {
     align-items: center;
 }
 
+#checkout {
+    margin: 8px;
+}
+
 @media only screen and (max-width: 600px) {
     .header {
         display: grid;
