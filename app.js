@@ -148,7 +148,7 @@ $(document).ready(() => {
       $("#cart-display").append(`
         <div class="cart-item" data-id="${bought.id}">
         <div class="cart-item-interior">
-          <div id="item-amount">Amount: ${itemCount}</div> <div>${moreLessBtns}</div>
+          <div id="item-amount">Amount: ${itemCount}</div> <div class="more-less">${moreLessBtns}</div>
         </div>
           <div id="item-img" class="cart-item-interior"><img src="${
             bought.img

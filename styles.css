@@ -148,14 +148,23 @@ h1.title {
     padding: 8px;
 }
 .cart-item img {
-    height: 80px;
+    max-height: 100%;
+    width: auto;
     padding: 6px;
+}
+
+.cart-item-interior {
+    text-align: center;
 }
 
 #item-amount {
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.more-less {
+    display: flex;
 }
 
 #checkout {
@@ -180,11 +189,16 @@ h1.title {
         background: #072620;
         padding: 0;
     }
+    button {
+    font-size: .8rem;
+    margin: 1px;
+    padding: 2px;
+    }
     .cart-summary {
         background: #57f95d;
         padding: 8px;
     }
-    .cart-item {
-        height: 55px;
+    .cart-item > * {
+        font-size: .7rem;
     }
   }
