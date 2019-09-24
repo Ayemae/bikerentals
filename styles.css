@@ -70,8 +70,6 @@ button:disabled {
     #57f95d 50%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072620', endColorstr='#44ff4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  position: relative;
-  z-index: 2;
 }
 
 .header h1.title {
