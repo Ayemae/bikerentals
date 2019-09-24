@@ -160,6 +160,11 @@ h1.title {
     margin: 8px;
 }
 
+footer {
+    padding: 10px auto 8px;
+    font-size: .7rem;
+}
+
 @media only screen and (max-width: 600px) {
     .header {
         display: grid;
