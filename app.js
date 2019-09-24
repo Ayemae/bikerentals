@@ -103,7 +103,10 @@ $(document).ready(() => {
   insurancePromo();
 
   ////////////////////// BUY BUTTON
-  $(document.body).on("touchstart click", "#buy-btn", function() {
+  $(document.body).on("touchstart click", "#buy-btn", function(e) {
+    if(e.type == 'touchstart'){
+      $(this).off('click');
+  }
     // Which item is being bought?
     const dataIndex =
       $(this)
