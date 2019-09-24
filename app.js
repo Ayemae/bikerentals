@@ -232,7 +232,7 @@ $(document).ready(() => {
     // Change DOM to reflect change
     adjustCartSummary();
     $(`div.cart-item[data-id='${itemID}'`)
-      .children()
+      .children(".cart-item-interior")
       .children("#item-amount")
       .text(`Amount: ${itemCount}`);
     $(`div.cart-item[data-id='${itemID}'`)
@@ -280,7 +280,7 @@ $(document).ready(() => {
           $(`div.cart-item[data-id='${itemID}']`).remove();
         } else {
           $(`div.cart-item[data-id='${itemID}'`)
-            .children()
+            .children(".cart-item-interior")
             .children("#item-amount")
             .text(`Amount: ${itemCount}`);
           $(`div.cart-item[data-id='${itemID}'`)
