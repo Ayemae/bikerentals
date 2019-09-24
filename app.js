@@ -381,11 +381,13 @@ $(document).ready(() => {
     }
   });
 
-  $(document.body).on("mouseenter", "li", function() {
-    // hover starts code here
+  $(document.body).on("mouseenter", ".activate-cart-drop", function() {
+    if ( $( "#cart" ).first().is( ":hidden" ) ) {
+      $( "#cart" ).slideDown( 500 ).css("display", "flex");
+    }
   });
 
-  $(document.body).on("mouseleave", "li", function() {
-    // hover ends code here
+  $(document.body).on("mouseleave", ".header", function() {
+    $( "#cart" ).fadeOut();
   });
 });
