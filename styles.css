@@ -162,9 +162,13 @@ h1.title {
     margin: 8px;
 }
 
-footer {
+.footer {
     padding: 10px auto 8px;
     font-size: .7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
