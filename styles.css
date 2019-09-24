@@ -181,8 +181,8 @@ h1.title {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
-  text-align: center;
 }
 
 #item-amount {
