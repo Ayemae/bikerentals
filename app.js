@@ -390,9 +390,9 @@ $(document).ready(() => {
   $(document.body).on("mouseleave", ".header", function() {
     $( "#cart" ).fadeOut();
   });
-  $(window).click(function() {
-    $( "#cart" ).fadeOut();
-    });
+  // $(window).click(function() {
+  //   $( "#cart" ).fadeOut();
+  //   });
     // $(".activate-cart-drop").click(function(event){
     //     event.stopPropagation();
     // });
