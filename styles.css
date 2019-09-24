@@ -163,7 +163,7 @@ h1.title {
 }
 
 .footer {
-    padding: 10px auto 8px;
+    margin: 20px auto 10px;
     font-size: .7rem;
     display: flex;
     flex-wrap: wrap;
