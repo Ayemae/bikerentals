@@ -312,7 +312,7 @@ $(document).ready(() => {
     $("#cart-display").append(`
         <div class="cart-item" data-id="${itemID}">
         <div class="cart-item-interior">
-          <div id="item-amount" style="font-size: .7rem">Insurance has been applied to your order!</div>
+          <div id="item-amount" style="font-size: .55rem">Insurance has been applied to your order!</div>
         </div>
           <div id="item-img" class="cart-item-interior"><img src="${
             products[dataIndex].image
