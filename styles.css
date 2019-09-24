@@ -190,7 +190,7 @@ h1.title {
         background: #072620;
         padding: 0;
     }
-    button {
+    .cart-item button {
     font-size: .8rem;
     margin: 1px;
     padding: 2px;
