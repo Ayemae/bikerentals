@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="./normalize.css" />
     <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/805a67adcb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Bike Rentals</title>
 
     <!-- jQuery -->
@@ -18,28 +22,37 @@
 
   <body>
     <section class="header">
-        <h1 class="title">Bike Rentals</h1>
+      <h1 class="title">Bike Rentals</h1>
 
-      <div class="cart-summary">
-        <span class="cart-header">Cart: </span>
-        <div id="my-cart">$0.00 [0 items]</div>
+      <div class="cart-summary" id="cart-drop" >
+        <span class="cart-header"
+          >Cart:
+          <span id="my-cart">$0.00 [0 items]</span>
+          <i class="fas fa-caret-down" style="padding: 0px 5px"></i>
+        </span>
       </div>
+      <div class="cart-drop-anchor">
+            <section class="cart">
+                    <h1>My Cart</h1>
+                    <div class="cart-total-box">
+                      <span id="cart-total">$0.00 [0 items]</span>
+                    </div>
+                    <div id="cart-display"></div>
+            
+                    <div id="checkout"></div>
+            </section>
+            </div>
     </section>
 
-    <section id="info"></section>
-    <section id="promo"></section>
+    <div class="banner"></div>
 
-    <section id="shop-index"></section>
+    <main>
+      <section id="info"></section>
+      <section id="promo"></section>
 
-    <section class="cart">
-      <h1>My Cart</h1>
-      <div class="cart-total-box">
-        <span id="cart-total">$0.00 [0 items]</span>
-      </div>
-      <div id="cart-display"></div>
+      <section id="shop-index"></section>
 
-      <div id="checkout"></div>
-    </section>
+    </main>
   </body>
   <script src="./app.js"></script>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Ubuntu:400,400i,700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -7,12 +9,23 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    color: #072620;
 }
 
 img {
     max-width: 100%;
     border-radius: 8px;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-family: "Raleway";
+    margin: 10px;
+}
+
+h2 {
+    font-size: 1.3rem;
 }
 
 button {
@@ -33,8 +46,30 @@ button:disabled {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title cart";
-    padding: 10px;
+    padding: 5px 10px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#072620+49,072620+50,44ff4b+50 */
+background: #072620; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #072620 49%, #072620 50%, #57f95d 50%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #072620 49%,#072620 50%,#57f95d 50%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #072620 49%,#072620 50%,#57f95d 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072620', endColorstr='#44ff4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+.header h1.title {
+    font-family: "Raleway";
+    color: #fff;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    background-image: url("images/bikes.jpg");
+    background-position: center center;
+}
+
+main {
+}
+
 .cart-summary {
     grid-area: cart;
     display: flex;
@@ -44,8 +79,14 @@ button:disabled {
 
 h1.title {
     grid-area: title;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
+}
+
+.cart-drop-anchor {
+    display: block;
+    text-align: right;
 }
 
 #promo,
@@ -83,6 +124,13 @@ h1.title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 0;
+    background: white;
+    padding: 10px;
+    max-width: 100vw;
+    width: 600px;
+    z-index: 1;
 }
 
 .cart-item {
@@ -113,5 +161,11 @@ h1.title {
         grid-template-columns: 1fr;
         grid-template-areas: "cart"
                              "title";
+        background: #072620;
+        padding: 0;
+    }
+    .cart-summary {
+        background: #57f95d;
+        padding: 8px;
     }
   }

@@ -11,7 +11,7 @@ $(() => {
          data-id="${product.id}">
            <img src="${product.image}" alt="${product.name}" />
            <h2>${product.name}</h2>
-           <span class="price">${product.price.toFixed(2)}</span>
+           <span class="price">$${product.price.toFixed(2)}</span>
            <button id="buy-btn" >Add to cart</button>
          </div>`;
         $(productDiv).appendTo("#shop-index");
@@ -335,6 +335,7 @@ $(document).ready(() => {
   });
 
   $(document.body).on("click", "#checkout-submit", function() {
+    let arrOfChecked = [];
     const validate = confirm(`Proceed to checkout?`);
     if (validate == true) {
       $("#info").html(`
@@ -347,16 +348,19 @@ $(document).ready(() => {
       for (let i = 0; i < cart.items.length; i++) {
         let dataIndex = cart.items[i] - 1;
         let nOfItem = 0;
-        for (let ii = 0; ii < cart.items.length; ii++) {
-          console.log(dataIndex);
-          if (cart.items[ii] === cart.items[i]) {
-            nOfItem++;
+        if (arrOfChecked.includes(cart.items[i]) == false) {
+          arrOfChecked.push(cart.items[i]);
+          for (let ii = 0; ii < cart.items.length; ii++) {
+            console.log(dataIndex);
+            if (cart.items[ii] === cart.items[i]) {
+              nOfItem++;
+            }
           }
+          let listItem = `<li>${products[dataIndex].name}, ${nOfItem}</li>`;
+          $("#order-summary").append(listItem);
         }
-        let listItem = `<li>${products[dataIndex].name}, ${nOfItem}</li>`;
-        $("#order-summary").append(listItem);
       };
-      
+
       // reset cart
       cart = {
         items: [],
@@ -374,6 +378,14 @@ $(document).ready(() => {
       validCheckout();
       saveCart();
       return cart;
-    };
+    }
+  });
+
+  $(document.body).on("mouseenter", "li", function() {
+    // hover starts code here
+  });
+
+  $(document.body).on("mouseleave", "li", function() {
+    // hover ends code here
   });
 });
