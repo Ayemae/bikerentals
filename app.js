@@ -103,7 +103,7 @@ $(document).ready(() => {
   insurancePromo();
 
   ////////////////////// BUY BUTTON
-  $(document.body).on("click", "#buy-btn", function() {
+  $(document.body).on("touchstart click", "#buy-btn", function() {
     // Which item is being bought?
     const dataIndex =
       $(this)
@@ -168,7 +168,7 @@ $(document).ready(() => {
   });
 
   ///////////////////////// REMOVE BUTTON
-  $(document.body).on("click", "#rmv-btn", function() {
+  $(document.body).on("touchstart click", "#rmv-btn", function() {
     const removedID = $(this)
       .parent()
       .parent()
@@ -205,7 +205,7 @@ $(document).ready(() => {
   });
 
   //////////////////////// MORE BUTTON
-  $(document.body).on("click", "#more", function() {
+  $(document.body).on("touchstart click", "#more", function() {
     // Which item is being increased?
     const itemID = $(this)
       .closest(".cart-item")
@@ -245,7 +245,7 @@ $(document).ready(() => {
   });
 
   //////////////// LESS BUTTON
-  $(document.body).on("click", "#less", function() {
+  $(document.body).on("touchstart click", "#less", function() {
     // Which item is being decreased?
     const itemID = $(this)
       .closest(".cart-item")
@@ -297,7 +297,7 @@ $(document).ready(() => {
   });
 
   //////////////////////// ADD INSURANCE
-  $(document.body).on("click", "#add-insurance", function() {
+  $(document.body).on("touchstart click", "#add-insurance", function() {
     // Which item is being increased?
     const itemID = $(this).data("id");
     const dataIndex = itemID - 1;
@@ -334,7 +334,7 @@ $(document).ready(() => {
     return cart;
   });
 
-  $(document.body).on("click", "#checkout-submit", function() {
+  $(document.body).on("touchstart click", "#checkout-submit", function() {
     let arrOfChecked = [];
     const validate = confirm(`Proceed to checkout?`);
     if (validate == true) {
